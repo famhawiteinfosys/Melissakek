@@ -65,7 +65,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/Melissa
-RUN git clone -b shiken https://github.com/famhawiteinfosys/Melissa /root/Melissa
+RUN git clone -b main https://github.com/famhawiteinfosys/Melissa /root/Melissa
 WORKDIR /root/Melissa
 
 #Copy config file to /root/Melissa/Melissa
