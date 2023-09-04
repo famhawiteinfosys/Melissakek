@@ -46,4 +46,4 @@ An PowerFull Group Manager Bot. Written In Pytelethon.
 
 ### Sponsors 🎸
 
-**[famhawiteinfosys](https://github.com/famhawiteinfosys)** ▪ **[Aswin Raj](https://github.com/AsWIN-RAJ-TG)**
+**[famhawiteinfosys](https://github.com/famhawiteinfosys)** ▪ **[Nicky Lalrochhara](https://lalrochhara.github.io)**
