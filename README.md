@@ -3,7 +3,7 @@
 An PowerFull Group Manager Bot. Written In Pytelethon.
 
 <p align="center">
-  <img src="https://telegra.ph/file/fd28c4d14220d0beb3ba1.jpg">
+  <img src="https://i.ibb.co/jbwpmTn/Melissa-as-Cop-Girl.jpg">
 </p>
 
 <p align="center">
