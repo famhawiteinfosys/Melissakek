@@ -1,8 +1,15 @@
+from telegram.ext import Updater, UpdateQueue
+
+# Create an UpdateQueue instance
+update_queue = UpdateQueue()
+
+# Initialize the Updater with the update_queue
+updater = Updater(TOKEN, update_queue=update_queue)
+
 import logging
 import os
 import sys
 import time
-
 import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
@@ -43,9 +50,7 @@ if ENV:
     LOAD = os.environ.get("LOAD", "").split()
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
     NO_LOAD = os.environ.get("NO_LOAD", "").split()
-    START_IMG = os.environ.get(
-        "START_IMG", "https://telegra.ph/file/40eb1ed850cdea274693e.jpg"
-    )
+    START_IMG = os.environ.get("START_IMG", "https://telegra.ph/file/40eb1ed850cdea274693e.jpg")
     STRICT_GBAN = bool(os.environ.get("STRICT_GBAN", True))
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", "DevilsHeavenMF")
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
@@ -143,9 +148,10 @@ DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(1356469075)
 
-
-updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("Fallen", API_ID, API_HASH)
+update_queue = tg.UpdateQueue()
+updater = tg.Updater(TOKEN, update_queue=update_queue)
+StartTime = time.time()
+telethn = TelegramClient("Melissa", API_ID, API_HASH)
 
 pbot = Client("Melissa", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
