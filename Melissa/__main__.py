@@ -83,7 +83,7 @@ Hit /help to find out more about how to use me to my full potential.
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD TO YOUR GROUP ➕️", url="https://t.me/dMelissaBot?startgroup=true"),
+            text="Group ah hmang rawh", url="https://t.me/dMelissaBot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="Updates", url="https://t.me/MelissaUpdates"),
@@ -91,7 +91,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="Commands ❔", callback_data="help_back"
+            text="Commands", callback_data="help_back"
         ),
     ],
 ]
@@ -315,7 +315,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="「 GO BACK 」", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="Kir leh", callback_data="help_back")]]
                 ),
             )
 
@@ -382,7 +382,7 @@ def Melissa_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="Melissa_back")
+                    InlineKeyboardButton(text="Kir leh", callback_data="Melissa_back")
                  ]
                 ]
             ),
@@ -393,7 +393,7 @@ def Melissa_about_callback(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
-                disable_web_page_preview=False,
+                disable_web_page_preview=True,
         )
 
 
@@ -403,13 +403,13 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..🤗 I'm *Melissa*
-                 \nHere is the [Source Code](https://github.com/famhawiteinfosys/Melissa) .""",
+                 \nHere is my [Terms of Use](https://github.com/famhawiteinfosys) .""",
             parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=False,
+            disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="source_back")
+                    InlineKeyboardButton(text="Kir lehu", callback_data="source_back")
                  ]
                 ]
             ),
@@ -438,7 +438,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Help",
+                                text="Tanpuina",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -454,7 +454,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help",
+                            text="Tanpuina",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
@@ -475,7 +475,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="Kir leh", callback_data="help_back")]]
             ),
         )
 
@@ -548,7 +548,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Back",
+                                text="Kir leh",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
@@ -624,7 +624,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Settings",
+                                text="Siamthatna",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -650,7 +650,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1414146649 and DONATION_LINK:
+        if OWNER_ID != 6161727895 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
